@@ -1,0 +1,110 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style the header */
+header {
+  background-color: purple;
+  padding: 30px;
+  text-align: center;
+  text-shadow: 4px 4px 8px #000000;
+  font-size: 35px;
+  color: white;
+}
+
+/* Container for flexboxes */
+section {
+ 
+  display: flex;
+  flex-wrap:wrap;
+
+}
+
+/* Style the navigation menu */
+nav{
+  width: 100%;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: #f1f1f1;
+  display:flex;
+  flex-direction: row;
+  width: 100%;
+  flex:1;
+}
+nav ul li{flex:1;}
+
+nav ul li a {
+  display: block;
+  color: black;
+  padding: 8px 16px;
+  text-decoration: none;
+  background-color: rgb(255, 197, 255);
+  border: 1px solid black;
+  flex:1;
+  align-content: center;
+}
+nav ul li a:hover{
+  background-color: purple;
+  color:white;
+}
+.active {
+  background-color:white;
+  color: purple;
+}
+
+/* Style the content */
+article {
+
+  flex: 4.45;
+  background-color: rgb(255, 197, 255);
+  padding: 10px;
+}
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.column {
+  flex: 1;
+}
+p{
+  font-size: large;
+}
+h1{
+  color:purple;
+}
+/* Style the footer */
+footer {
+  background-color: purple;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+#js{
+  width: 100%;
+}
+#diaris img{
+  width:30%;
+}
+#gracies {
+    color: green;
+    text-align: center;
+}
+
+
+/* Responsive layout - makes the menu and the content (inside the section) sit on top of each other instead of next to each other */
+@media (max-width: 600px) {
+  section {
+    -webkit-flex-direction: column;
+    flex-direction: column;
+  }
+}

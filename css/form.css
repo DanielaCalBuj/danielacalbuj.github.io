@@ -1,0 +1,65 @@
+div:has(> label + br + input[required]:not([type="radio"])) label::after,
+label:has(+ select[required])::after,
+label:has(+ textarea[required])::after {
+    content: " *";
+    color: red;
+    font-weight: bold;
+}
+p[required]::after {
+    content: " *";
+    color: red;
+    font-weight: bold;
+}
+form{
+  text-align: left;
+  padding-left: 4%;
+}
+input:user-invalid {
+    border: 2px solid red;
+}
+
+input:user-valid {
+    border: 2px solid green;
+}
+
+.missatge-error{
+    display: none;
+    font-size: 0.8rem;
+    color:red;
+}
+input:user-invalid ~ .missatge-error{
+    display:block;
+}
+.contacte{
+    font-size: 15;
+}
+.form{
+    border-color: rgb(255, 255, 255);
+    border:2px solid black;
+    padding:3%;
+    margin-right: 3%;
+    background-color: white;
+    border-radius: 2%;
+}
+#nom, #cognoms, #contrasenya, #DNI, #correu{
+    height: 40px;
+}
+
+label{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+}
+button{
+    height:40px;
+    margin-right: 2%;
+    margin-bottom: 2%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: larger;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 4px;
+}
+button:hover{
+    background-color:purple;
+    color:white;
+}

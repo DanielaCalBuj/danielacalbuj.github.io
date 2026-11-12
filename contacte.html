@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Jocs</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/form.css">
+</head>
+
+<body>
+    <header>
+        <h2>Jocs de navegador</h2>
+    </header>
+    <section>
+        <nav>
+            <ul>
+                <li><a href="index.html">Introducció</a></li>
+                <li><a href="millors_llenguatges.html">Millors llenguatges per a jocs</a></li>
+                <li><a href="jocs_diaris.html">Jocs diaris</a></li>
+                <li><a href="galeria.html">Galeria de jocs</a></li>
+                <li><a href="contacte.html" class="active">Contacte</a></li>
+            </ul>
+        </nav>
+
+        <article>
+            <h1>Contacte:</h1>
+            <p>Introdueix les teves dades si vols rebre informació periòdicament!</p><br><br>
+            <form action="gracies.html" method="get">
+                <div class="row flex-container">
+
+                    <div class="column form">
+                        <h1 class="contacte">Informació de contacte:</h1>
+                        <div>
+                            <label for="nom">Nom:</label><br>
+                            <input type="text" id="nom" required pattern="[A-ZÁÀÉÈÍÓÒÚÜÑ][a-záàèéíóòúüñ]+"
+                                placeholder="Nom" size="100">
+                            <span class="missatge-error">Assegura't que la inicial del nom està en majúscula.</span>
+                        </div>
+                        <br>
+                        <div>
+                            <label for="cognoms">Cognoms:</label><br>
+                            <input type="text" id="cognoms" required
+                                pattern="[A-ZÁÀÉÈÍÓÒÚÜÑ][a-záàèéíóòúüñ]+ [A-ZÁÀÉÈÍÓÒÚÜÑ][a-záàèéíóòúüñ]+"
+                                placeholder="Cognom1 Cognom2" size="100">
+                            <span class="missatge-error">Assegura't que la inicial de cada cognom està en
+                                majúscula.</span>
+                        </div>
+                        <br>
+                        <div>
+                            <label for="DNI">DNI/NIE:</label><br>
+                            <input type="text" id="DNI" required pattern="[X-Z0-9][0-9]{7}[A-Z]"
+                                placeholder="12345678P / X1234567A" size="100">
+                            <span class="missatge-error">Introdueix un document vàlid amb lletres incloses.</span>
+                        </div>
+                        <br>
+                        <div>
+                            <label for="contrasenya">Contrasenya:</label><br>
+                            <input autocomplete type="password" id="contrasenya" required
+                                pattern="(?=.*[0-9])(?=.*[A-Z])(?=.*[a-z])(?=.*[^A-Za-z0-9]).{6,18}"
+                                placeholder="Mínim: una majúscula, una minúscula, un número i un caràcter especial. Longitud: mínim 6." size="100">
+                            <span class="missatge-error">Ha de contenir com a mínim: una majúscula, una minúscula, un
+                                número i un caràcter especial. Longitud mínima: 6 caràcters.</span>
+                        </div>
+                        <br>
+                        <div>
+                            <label for="correu">Correu electrònic:</label><br>
+                            <input type="email" id="correu" required placeholder="correu@domini.extensió" size="100">
+                            <span class="missatge-error">Introdueix una adreça vàlida.</span>
+                        </div><br>
+                        <div>
+                            <p required>Amb quina freqüència vols rebre informació?</p>
+                            <input type="radio" id="diariament" name="frequencia" value="diariament" required>
+                            <label for="diariament">Diàriament</label><br>
+                            <input type="radio" id="setmanalment" name="frequencia" value="setmanalment" required>
+                            <label for="setmanalment">Setmanalment</label><br>
+                            <input type="radio" id="mensualment" name="frequencia" value="mensualment" required>
+                            <label for="mensualment">Mensualment</label>
+                        </div>
+                    </div>
+
+                    <div class="column form">
+                        <h1 class="opcionals">Dades opcionals:</h1>
+                        <div>
+                            <label>Com vas conèixer la pàgina?</label>
+                            <select id="coneixer" name="coneixer">
+                                <option value="amics">Amics</option>
+                                <option value="xarxes socials">Xarxes socials</option>
+                                <option value="publicitat">Publicitat</option>
+                                <option value="altres">Altres</option>
+                            </select>
+                        </div>
+                        <br>
+                        <br>
+                        <div>
+                            <label for="suggeriments">Suggeriments:</label>
+                        </div>
+                        <div>
+                            <textarea id="suggeriments" name="suggeriments" rows="5" cols="40"
+                                placeholder="Escriu aquí les teves propostes..." maxlength="100"></textarea>
+                        </div>
+                        <br>
+                        <div>
+                            <p>Si has programat jocs alguna vegada, quins llenguatges has fet servir?</p>
+                            <input type="checkbox" id="java" name="llenguatges" value="Java">
+                            <label for="java">Java</label>
+                            <br>
+                            <input type="checkbox" id="javascript" name="javascript" value="JavaScript">
+                            <label for="javascript">JavaScript</label>
+                            <br>
+                            <input type="checkbox" id="python" name="python" value="Python">
+                            <label for="python">Python</label>
+                            <br>
+                            <input type="checkbox" id="c" name="c" value="C">
+                            <label for="c">C</label>
+                            <br>
+                            <input type="checkbox" id="cpp" name="cpp" value="C++">
+                            <label for="cpp">C++</label>
+                            <br>
+                            <input type="checkbox" id="csharp" name="csharp" value="C#">
+                            <label for="csharp">C#</label>
+                            <br>
+                            <input type="checkbox" id="lua" name="lua" value="Lua">
+                            <label for="lua">Lua</label>
+                            <br>
+                            <input type="checkbox" id="gdscript" name="gdscript" value="GDScript">
+                            <label for="gdscript">GDScript</label>
+                            <br>
+                            <input type="checkbox" id="php" name="php" value="PHP">
+                            <label for="php">PHP</label>
+                            <br>
+                            <input type="checkbox" id="kotlin" name="kotlin" value="Kotlin">
+                            <label for="kotlin">Kotlin</label>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <button type="submit">Enviar el formulari</button><button type="reset">Cancel·la i
+                    esborra</button>
+            </form>
+        </article>
+    </section>
+
+    <footer>
+        <p>per Daniela Calderón Bujalance</p>
+    </footer>
+
+</body>
+
+</html>
